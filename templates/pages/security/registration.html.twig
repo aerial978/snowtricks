@@ -1,0 +1,103 @@
+{% extends 'baseform.html.twig' %}
+
+{% block title %}Snowtricks - Registration
+{% endblock %}
+
+{% block body %}
+	<div class="main">
+		<section class="sign">
+			<h1 class="navbar-brand text-success text-center fs-1" href="#">SnowTricks</h1>
+			<div class="container">
+				<div class="sign-content">
+					<div class="row">
+						<div class="sign-image col-md-6">
+							<figure><img src="../images/snowboarder3.jpg" alt="sign image" class="img-fluid"></figure>
+						</div>
+						<div class="sign-form col-md-6">
+							<h2 class="form-title text-info fw-bold pb-4">Sign up</h2>
+							{{ form(form) }}
+                            <div class="form-group form-button">
+                                <a class="back-button btn btn-lg btn-info border border-info bg-white text-info" role="button" href="{{ path('home.index') }}">Back</a>
+                            </div>
+						</div>
+					</div>
+				</div>
+            </div>
+		</section>
+	</div>
+
+		<style>
+			.main {
+				padding: 60px 0;
+			}
+
+			img {
+				width: 350px;
+			}
+
+			.container {
+				width: 900px;
+				margin: 0 auto;
+				background: white;
+				box-shadow: rgba(0, 0, 0, 0.25) 0 5px 15px;
+			}
+
+			.sign-content {
+				padding: 75px 0;
+			}
+
+			.sign {
+				margin-bottom: 150px;
+			}
+
+			figure {
+				text-align: center;
+			}
+
+			.btn-info {
+				color: #fff;
+				width: auto;
+				font-size: 15px;
+			}
+
+			.btn-info:hover {
+				color: #0DCAF0;
+				background: white;
+			}
+
+			.sign-form {
+				padding-left: 80px;
+				padding-right: 75px;
+			}
+
+			input {
+				display: block;
+				padding: 6px 30px;
+				width: 100%;
+				border: none;
+				outline: none;
+				border-bottom: 1px solid #999;
+				font-size: 15px;
+			}
+
+			label {
+				position: absolute;
+				padding-top: 5px;
+			}
+
+			.sign-image-link {
+				text-align: center;
+				display: block;
+				font-size: 15px;
+			}
+
+			.sign-image-link:hover {
+				color: #ffc107 !important;
+			}
+
+			.back-button:hover {
+				background: #0DCAF0 !important;
+				color: white !important;
+			}
+		</style>
+	{% endblock %}
